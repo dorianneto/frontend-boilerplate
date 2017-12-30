@@ -1,0 +1,116 @@
+@import "../tools/mixins";
+@import "../settings/variables";
+
+/*
+    INDEX
+
+    1.0 - PROJECT
+        1.1 - TEXT
+        1.2 - TITLES
+        1.3 - LISTS
+        1.4 - IMAGES
+        1.5 - MISC
+        1.6 - BUTTONS
+    2.0 - CONTENT
+        2.1 - HEADER
+        2.2 - MAIN
+
+ */
+
+/* ==========================================================================
+   1.0 - PROJECT
+   ========================================================================== */
+body {
+    font-family: @font_family;
+    background-color: @bg_primary;
+    color: @color_primary;
+    font-size: @font_size;
+}
+
+/* 1.1 - TEXT
+   ========================================================================== */
+p, a {
+    font-weight: @font_weight;
+    color: @color_text;
+    text-decoration: none;
+    .transition(all 0.2s linear);
+
+    &:hover { text-decoration: none;}
+}
+
+a:hover { color: @color_primary;}
+
+
+/* 1.2 - TITLES
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+    color: @color_primary;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 300;
+    white-space: normal;
+}
+
+/* 1.3 - LISTS
+   ========================================================================== */
+ul.list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+    &.list-item {
+        margin: 10px 0;
+        padding: 0 0 0 20px;
+        list-style: circle;
+    }
+}
+
+/* 1.4 - IMAGES
+   ========================================================================== */
+figure {
+    margin: 0px;
+    padding: 0px;
+
+    @media screen and (max-width: 768px) {
+        img { width: 100%;}
+    }
+}
+
+/* 1.5 - MISC
+   ========================================================================== */
+.no-margin { margin: 0px !important;}
+.middle { vertical-align: middle !important;}
+.element-parallax { display: none;}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+    .element-parallax {
+        display: block;
+    }
+}
+
+/* 1.6 - BUTTONS
+   ========================================================================== */
+.btn {
+    .transition(all 0.2s linear);
+
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+   2.0 - CONTENT
+   ========================================================================== */
+
+/* 2.1 - HEADER
+   ========================================================================== */
+#header {}
+
+/* 2.2 - MAIN
+   ========================================================================== */
+#main {}
+
+/* 2.3 - FOOTER
+   ========================================================================== */
+#footer {}
